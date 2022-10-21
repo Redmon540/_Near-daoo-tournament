@@ -1,0 +1,20 @@
+{
+  "name": "tournament",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "build": "yarn install && asb",
+    "dev":"yarn build && yarn deploy",
+    "deploy":"near dev-deploy build/release/tournament.wasm ",
+    "clean":"rm -rf ./build && rm -rf ./neardev",
+    "build:debug": "asb --target debug",
+    "test": "asp --nologo"
+  },
+  "dependencies": {
+    "near-sdk-as": "3.1.0"
+  },
+  "devDependencies": {
+    "shelljs": "^0.8.4"
+  }
+}
